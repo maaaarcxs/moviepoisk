@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'custom_admin',
     'django_filters',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
