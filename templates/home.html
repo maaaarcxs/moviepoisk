@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Домашняя страница{% endblock %}
+{% block header %}{% endblock %}
+
+{% block fields %}
+
+        <div class="movies">
+
+            <div class="movie_card">
+                
+                {% for movie in movies %}
+
+                    <img src="{{ movie.picture.url }}" alt="">
+
+                    <h2>{{ movie.title }}</h2>
+                    <p>
+                        {% for g in movie.genre.all %}
+                            {{ g.name }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                    <p>Оценка: {{ movie.rating }}</p>
+                    <p>Возрастное ограничение: {{ movie.age_restriction }}</p>
+                    <p class="description">{{ movie.description }}</p>
+
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}

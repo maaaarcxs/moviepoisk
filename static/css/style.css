@@ -1,0 +1,257 @@
+/* Стилизация навбара */
+*{
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 8px 8px rgba(0, 0, 0, 0.6);
+    color: white;
+    padding-top: 4px;
+
+    a{
+        text-decoration: none;
+        color: white;
+
+        img{
+            margin-top: 4px;
+        }
+    }
+
+    h1{
+        font-family: "Montserrat";
+        font-size: medium;
+    }
+}
+
+
+/* Стилизация главной страницы */
+
+body{
+    background-image: url("/static/img/moviepoiskbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+    h1{
+        color: white;
+        font-family: "Montserrat";
+    }
+}
+
+.movies{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    width: 100%;
+
+    .movie_card{
+        margin-top: 150px;
+        max-width: 350px;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 6px 8px 8px rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+
+        img{
+            max-width: 350px;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        h2{
+            color: white;
+            max-width: 400px;
+            width: 100%;
+            font-size: 16px;
+            font-family: "Montserrat";
+        }
+
+        p{
+            color: white;
+            max-width: 400px;
+            width: 100%;
+            font-size: 13px;
+            font-family: "Montserrat";
+        }
+
+        .description{
+            color: white;
+            max-width: 350px;
+            width: 100%;
+            font-size: 13px;
+            font-family: "Montserrat";
+        }
+    }
+}
+
+
+/* Стилизация футера */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 8px 8px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    gap: 450px;
+    margin-top:180px;
+    padding-top: 15px;
+
+    .socialmedia{
+        display: flex;
+        flex-direction: column;
+
+        .intro{
+            display: flex;
+            gap: 5px;
+
+            color: white;
+            font-family: "Montserr35pxat";
+            margin-bottom: 10px;
+
+            p{
+                font-family: "Montserrat";
+            }
+
+            img{
+                max-width: 24px;
+                width: 100%;
+            }
+        }
+        
+        .smedia{
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            margin-left: 35px;
+        }
+
+        a{
+            color: white;
+            font-family: "Montserrat";
+            text-decoration: none;
+        }
+    }
+
+
+    .support{
+        display: flex;
+        flex-direction: column;
+
+        .intro{
+            color: white;
+            font-family: "Montserrat";
+            margin-bottom: 5px;
+            display: flex;
+            gap: 5px;
+
+            img{
+                max-width: 24px;
+                width: 100%;
+            }
+        }
+
+        .smedia{
+            display: flex;
+            gap: 5px;
+            margin-left: 35px;
+            margin-bottom: 20px;
+
+            color: white;
+            font-family: "Montserrat";
+            text-decoration: none;
+
+            a{
+                font-family: "Montserrat";
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+
+/* Стилизация страницы о нас */
+
+
+.about_items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h4{
+        font-family: "Montserrat";
+
+    }
+
+    p{
+        font-family: "Montserrat";
+    }
+}
+
+
+/* Стилизация register */
+
+
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 6px 8px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 4px;
+
+    header{
+        color: white;
+        font-family: "Montserrat";
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        label{
+            color: white;
+            font-family: "Montserrat";
+        }
+
+        input{
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            max-width: 280px;
+            width: 100%;
+        }
+    }
+
+    button{
+            max-width: 200px;
+            width: 100%;
+            padding: 10px 25px;
+            margin-left: 45px;
+
+            font-family: "Montserrat";
+            color: black;
+    }
+
+    p{
+        font-family: "Montserrat";
+        margin-left: 30px;
+        
+        a{
+            text-decoration: none;
+        }
+    }
+}
