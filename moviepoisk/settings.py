@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'custom_admin',
     'django_filters',
     'phonenumber_field',
+    'django_resized',
+    'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +119,11 @@ TIME_ZONE = 'Asia/Bishkek'
 USE_I18N = True
 
 USE_TZ = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 12,
+}
 
 
 # Static files (CSS, JavaScript, Images)

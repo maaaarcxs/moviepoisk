@@ -44,26 +44,26 @@ class Movie(models.Model):
         verbose_name_plural = 'Фильмы'
 
 
-class User(models.Model):
-    uname = models.CharField(verbose_name='Имя пользователя', max_length=150)
-    uemail = models.EmailField(verbose_name='Электронная почта', unique=True)
-    upassword = models.CharField(verbose_name='Пароль', max_length=128)
+# class User(models.Model):
+#     uname = models.CharField(verbose_name='Имя пользователя', max_length=150)
+#     uemail = models.EmailField(verbose_name='Электронная почта', unique=True)
+#     upassword = models.CharField(verbose_name='Пароль', max_length=128)
 
-    def __str__(self):
-        return f'{self.uname} ({self.uemail})'
+#     def __str__(self):
+#         return f'{self.uname} ({self.uemail})'
     
-    class Meta:
-        verbose_name = 'Пользователь'
-        verbose_name_plural = 'Пользователи'
+#     class Meta:
+#         verbose_name = 'Пользователь'
+#         verbose_name_plural = 'Пользователи'
 
 
-class MonthlySubscription(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='subscription')
-    balance = models.DecimalField(default=0, decimal_places=2, max_digits=10, verbose_name='Баланс',)
+# class MonthlySubscription(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='subscription')
+#     balance = models.DecimalField(default=0, decimal_places=2, max_digits=10, verbose_name='Баланс',)
 
-    def __str__(self):
-        return f'Contract for {self.user.uname}, balance: {self.balance}'
+#     def __str__(self):
+#         return f'Contract for {self.user.uname}, balance: {self.balance}'
     
-    class Meta:
-        verbose_name = "Подписчик"
-        verbose_name_plural = 'Подписчики'
+#     class Meta:
+#         verbose_name = "Подписчик"
+#         verbose_name_plural = 'Подписчики'
