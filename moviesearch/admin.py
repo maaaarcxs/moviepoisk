@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Genre, Movie, User, MonthlySubscription
+from .models import Genre, Movie # User, MonthlySubscription
 
 class MovieAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'rating', 'age_restriction', 'preview')
@@ -45,31 +45,31 @@ class GenreAdmin(admin.ModelAdmin):
     movie_count.short_description = 'Количество фильмов'
 
 
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'uname', 'uemail')
-    list_display_links = ('uname',)
-    search_fields = ['uname']
-    ordering = ('id',)
-    fieldsets = (
-        ('Пользователь', {
-            'fields': ('uname', 'uemail', 'upassword')
-        }),
-    )
+# class UserAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'uname', 'uemail')
+#     list_display_links = ('uname',)
+#     search_fields = ['uname']
+#     ordering = ('id',)
+#     fieldsets = (
+#         ('Пользователь', {
+#             'fields': ('uname', 'uemail', 'upassword')
+#         }),
+#     )
 
 
-class MonthlySubscriptionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user__uname', 'balance')
-    list_display_links = ('user__uname',)
-    search_fields = ('user__uname',)
-    ordering = ('id',)
-    fieldsets = (
-        ('Месячная подписка', {
-            'fields': ('user', 'balance')
-        }),
-    )
+# class MonthlySubscriptionAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'user__uname', 'balance')
+#     list_display_links = ('user__uname',)
+#     search_fields = ('user__uname',)
+#     ordering = ('id',)
+#     fieldsets = (
+#         ('Месячная подписка', {
+#             'fields': ('user', 'balance')
+#         }),
+#     )
 
 
 admin.site.register(Movie, MovieAdmin)
 admin.site.register(Genre, GenreAdmin)
-admin.site.register(User, UserAdmin)
-admin.site.register(MonthlySubscription, MonthlySubscriptionAdmin)
+# admin.site.register(User, UserAdmin)
+# admin.site.register(MonthlySubscription, MonthlySubscriptionAdmin)
