@@ -5,8 +5,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from .managers import UserManager
 
 
-
-class User(AbstractUser): # PermissionsMixin):
+class User(AbstractUser):
     class Meta:
         verbose_name = 'пользователь'
         verbose_name_plural = 'пользователи'
